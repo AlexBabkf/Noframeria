@@ -1,13 +1,124 @@
 [
   {
-    "name": "",
+    "name": "Classic",
     "products": [
       {
         "id": 1,
-        "name": "",
-        "price": 0,
-        "description": "",
-        "image": ""
+        "name": "Pepperoni",
+        "price": 11.7,
+        "description": "Tomato Sauce, 100% Mozzarella, Pepperoni",
+        "image": "data/images/pepperoni.png"
+      },
+      {
+        "id": 2,
+        "name": "Ham & Mushroom",
+        "price": 10.1,
+        "description": "Tomato Sauce, 100% Mozzarella, Smoked Ham, Mushrooms",
+        "image": "data/images/hamnmush.png"
+      },
+      {
+        "id": 3,
+        "name": "Diavola",
+        "price": 11.1,
+        "description": "Tomato Sauce, 100% Mozzarella, Pepperoni, Onion, Jalapenos Peppers",
+        "image": "data/images/diavola.png"
+      },
+      {
+        "id": 4,
+        "name": "Garden Classic",
+        "price": 11.7,
+        "description": "Tomato Sauce, 100% Mozzarella, Fresh Tomato, Green Peppers, Mushrooms, Onion, Black Olives",
+        "image": "data/images/gardenclassic.png"
+      },
+      {
+        "id": 5,
+        "name": "Ham & Bacon",
+        "price": 11.7,
+        "description": "Tomato Sauce, 100% Mozzarella, Cheddar, Smoked Ham, Bacon",
+        "image": "data/images/hamnbacon.png"
+      },
+      {
+        "id": 6,
+        "name": "Greek",
+        "price": 11.7,
+        "description": "Tomato Sauce, Garlic, Oregano, 100% Mozzarella, Feta, Sausage, Fresh Tomato, Green Peppers, Onion, Black Olives",
+        "image": "data/images/greek.png"
+      }
+    ]
+  },
+  {
+    "name": "Vegetarian",
+    "products": [
+      {
+        "id": 7,
+        "name": "Margarita",
+        "price": 10.1,
+        "description": "Tomato Sauce, 100% Mozzarella",
+        "image": "data/images/margharita.png"
+      },
+      {
+        "id": 8,
+        "name": "4 Cheese",
+        "price": 11.7,
+        "description": "Tomato Sauce, 100% Mozzarella, Cheddar, Parmesan Reggiano, Blue Cheese",
+        "image": "data/images/4cheeses.png"
+      }
+    ]
+  },
+  {
+    "name": "Vegan",
+    "products": [
+      {
+        "id": 9,
+        "name": "Veggie",
+        "price": 11.7,
+        "description": "Tomato Sauce, Vegetable Cheese, Fresh Tomato, Green Peppers, Mushrooms, Onion, Black Olives",
+        "image": "data/images/veggie.png"
+      },
+      {
+        "id": 10,
+        "name": "Chilli Sin Carne",
+        "price": 11.7,
+        "description": "Tomato Sauce, Vegetable Cheese, Chili Sin Carne, Onion, Corn",
+        "image": "data/images/chilisin.png"
+      }
+    ]
+  },
+  {
+    "name": "Salads",
+    "products": [
+      {
+        "id": 11,
+        "name": "Caesar's",
+        "price": 6.9,
+        "description": "Iceberg & carrot, bacon or chicken, corn, croutons, Parmesan & Grana Padano mix, vinaigrette dressing",
+        "image": "data/images/ceasars.png"
+      },
+      {
+        "id": 12,
+        "name": "Green Salad",
+        "price": 6.3,
+        "description": "Iceberg, sweetcorn, sun dried tomatos, vinaigrette dressing",
+        "image": "data/images/greensalad.png"
+      }
+    ]
+  },
+  {
+    "name": "Desserts",
+    "products": [
+      {
+        "id": 13,
+        "name": "Choco Brownie",
+        "price": 1.9,
+        "description": "Freshly baked, Chocolate brownie",
+        "image": "data/images/brownie.png"
+      },
+      {
+        "id": 14,
+        "name": "Choco Souffle",
+        "price": 2.9,
+        "description": "Choco lava cake filled with melted chocolate",
+        "image": "data/images/souffle.png"
       }
     ]
   }
