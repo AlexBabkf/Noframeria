@@ -4,3 +4,36 @@ body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
 }
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+header > h1 {
+  background-color: #e12301;
+  color: white;
+  margin-top: 0;
+  text-align: center;
+  padding: 15px 0 15px 0;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+nav > a {
+  color: #fbf2c6;
+  padding: 8px;
+  display: block;
+  position: absolute;
+  top: 5px;
+  text-decoration: none;
+}
+
+#linkHome {
+  left: 5px;
+}
+
+#linkCart {
+  right: 5px;
+}
