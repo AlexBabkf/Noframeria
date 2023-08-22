@@ -16,11 +16,11 @@ export default class MenuPage extends HTMLElement {
       const css = await request.text();
       styles.textContent = css;
     }
+    loadCSS();
     window.addEventListener("appmenuchange", () => {
       this.render();
     });
     this.render();
-    loadCSS();
   }
 
   render() {
