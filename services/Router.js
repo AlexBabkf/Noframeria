@@ -27,7 +27,8 @@ export const Router = {
         break;
       default:
         if (route.startsWith("/product-")) {
-          pageElement = document.createElement("details-page");
+          pageElement = document.createElement("detailed-page");
+          console.log(pageElement.dataset);
           pageElement.dataset.id = route.substring(route.lastIndexOf("-") + 1);
         }
         break;
