@@ -37,3 +37,16 @@ nav > a {
 #linkCart {
   right: 5px;
 }
+
+#cartCounter {
+  padding: 4px;
+  background-color: red;
+  border-radius: 15px;
+  width: 10px;
+  text-align: center;
+  font-size: x-small;
+  color: white;
+  position: absolute;
+  right: 5px;
+  top: 6px;
+}

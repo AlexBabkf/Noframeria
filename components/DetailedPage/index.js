@@ -1,3 +1,5 @@
+import { addToCart } from "../../services/Cart.js";
+
 export async function getProductById(id) {
   if (app.store.menu == null) {
     await loadData();
@@ -42,7 +44,7 @@ export default class DetailedPage extends HTMLElement {
       ).textContent = `$ ${this.product.price.toFixed(2)}`;
       this.root
         .querySelector("button")
-        .addEventListener("click", () => app.router.go("/cart"));
+        .addEventListener("click", () => addToCart(this.product.id));
     } else {
       //  need to think
     }

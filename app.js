@@ -15,3 +15,11 @@ window.addEventListener("DOMContentLoaded", () => {
   loadData();
   app.router.init();
 });
+
+window.addEventListener("appcartchange", (event) => {
+  const cartCounter = document.getElementById("cartCounter");
+  const qty = app.store.cart.reduce((acc, item) => acc + item.quantity, 0);
+  cartCounter.textContent = qty;
+  console.log(cartCounter.qty);
+  cartCounter.hidden = qty == 0;
+});
