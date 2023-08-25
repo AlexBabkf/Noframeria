@@ -3,11 +3,23 @@ ul {
   padding: 0;
 }
 
-h3 {
-  color: var(--color4);
-  font-weight: normal;
-  padding-top: 15px;
-  font-size: 17px;
+#menu {
+  display: flex;
+  flex-direction: column;
+  padding-top: 35px;
+  padding-left: 35px;
+  width: 100%;
+}
+
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+product-item {
+  width: 25%;
+  margin: 20px;
 }
 
 button {
@@ -25,14 +37,6 @@ article section div {
   flex-grow: 2;
 }
 
-ul {
-  background-color: var(--color6);
-  margin: 4px 6px;
-  padding: 0px 12px;
-  border-radius: 10px;
-  padding-bottom: 10px;
-}
-
 article {
   background-color: white;
   margin-bottom: 16px;
@@ -41,7 +45,7 @@ article {
 }
 
 article img {
-  width: 15px;
+  width: 100%;
 }
 
 article a {
@@ -63,4 +67,5 @@ h4 {
 .price {
   margin: 0px 0 0px 12px;
   color: #b08968;
+  font-size: 18px;
 }

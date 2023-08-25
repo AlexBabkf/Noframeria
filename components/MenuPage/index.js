@@ -29,7 +29,7 @@ export default class MenuPage extends HTMLElement {
       for (let category of app.store.menu) {
         const liCategory = document.createElement("li");
         liCategory.innerHTML = `
-              <h3>${category.name}</h3>
+              <h1>${category.name}</h1>
               <ul class='category'>
               </ul>`;
         this.root.querySelector("#menu").appendChild(liCategory);
