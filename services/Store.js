@@ -1,6 +1,9 @@
+const savedCart = localStorage.getItem("cart");
+const initialCart = savedCart ? JSON.parse(savedCart) : [];
+
 const Store = {
   menu: null,
-  cart: [],
+  cart: initialCart,
 };
 
 const proxyStore = new Proxy(Store, {
@@ -11,6 +14,7 @@ const proxyStore = new Proxy(Store, {
     }
     if (property === "cart") {
       window.dispatchEvent(new Event("appcartchange"));
+      localStorage.setItem("cart", JSON.stringify(value));
     }
     return true;
   },
