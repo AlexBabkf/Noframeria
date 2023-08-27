@@ -1,0 +1,23 @@
+export default class CartCard extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    const item = JSON.parse(this.dataset.item);
+    this.innerHTML = "";
+
+    const template = document.getElementById("cart-card-template");
+    const content = template.content.cloneNode(true);
+
+    this.appendChild(content);
+
+    this.querySelector(".qty").textContent = `${item.quantity}x`;
+    this.querySelector(".name").textContent = item.product.name;
+    this.querySelector(".price").textContent = `$${item.product.price.toFixed(
+      2
+    )}`;
+  }
+}
+
+customElements.define("cart-card", CartCard);

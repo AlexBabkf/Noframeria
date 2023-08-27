@@ -60,6 +60,24 @@
       <button>Add to cart</button>
     </template>
 
-    <template></template>
+    <template id="cart-card-template">
+      <li>
+        <p class="qty"></p>
+        <p class="name"></p>
+        <p class="price"></p>
+      </li>
+    </template>
+
+    <template id="order-form-template">
+      <form>
+        <label for="name">Your Name</label>
+        <input name="name" required />
+        <label for="phone">Your Phone Number</label>
+        <input name="phone" type="tel" />
+        <label for="email">Your Email</label>
+        <input name="email" type="email" />
+        <button type="submit">Place Order</button>
+      </form>
+    </template>
   </body>
 </html>

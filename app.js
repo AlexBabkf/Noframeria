@@ -5,6 +5,7 @@ import loadData from "./services/Menu.js";
 import MenuPage from "./components/MenuPage/index.js";
 import Product from "./components/Product/index.js";
 import DetailedPage from "./components/DetailedPage/index.js";
+import CartPage from "./components/CartPage/index.js";
 
 window.app = {};
 

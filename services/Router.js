@@ -23,7 +23,7 @@ export const Router = {
         pageElement = document.createElement("menu-page");
         break;
       case "/cart":
-        pageElement = document.createElement("h1");
+        pageElement = document.createElement("cart-page");
         break;
       default:
         if (route.startsWith("/product-")) {
