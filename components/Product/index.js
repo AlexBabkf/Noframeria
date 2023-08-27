@@ -1,3 +1,5 @@
+import { addToCart } from "../../services/Cart.js";
+
 export default class Product extends HTMLElement {
   constructor() {
     super();
@@ -15,7 +17,11 @@ export default class Product extends HTMLElement {
     this.querySelector("img").src = product.image;
     this.querySelector("a").addEventListener("click", (event) => {
       console.log(event.target.tagName);
-      app.router.go(`/product-${product.id}`);
+      if (event.target.tagName.toLowerCase() == "button") {
+        addToCart(product.id);
+      } else {
+        app.router.go(`/product-${product.id}`);
+      }
       event.preventDefault();
     });
   }
