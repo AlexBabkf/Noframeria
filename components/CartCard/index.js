@@ -1,3 +1,5 @@
+import { removeFromCart } from "../../services/Cart.js";
+
 export default class CartCard extends HTMLElement {
   constructor() {
     super();
@@ -17,6 +19,9 @@ export default class CartCard extends HTMLElement {
     this.querySelector(".price").textContent = `$${item.product.price.toFixed(
       2
     )}`;
+    this.querySelector("a.delete-button").addEventListener("click", (event) => {
+      removeFromCart(item.product.id);
+    });
   }
 }
 

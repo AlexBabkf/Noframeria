@@ -15,3 +15,7 @@ export async function addToCart(id) {
     console.log("else" + app.store.cart);
   }
 }
+
+export function removeFromCart(id) {
+  app.store.cart = app.store.cart.filter((p) => p.product.id != id);
+}

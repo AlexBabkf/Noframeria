@@ -10,12 +10,22 @@ export default class CartPage extends HTMLElement {
 
   constructor() {
     super();
+
+    this.root = this.attachShadow({ mode: "open" });
+    const style = document.createElement("style");
+    this.root.appendChild(style);
+
+    const section = document.createElement("section");
+    this.root.appendChild(section);
+
+    async function loadCSS() {
+      const request = await fetch("/components/CartPage/CartPage.css");
+      style.textContent = await request.text();
+    }
+    loadCSS();
   }
 
   connectedCallback() {
-    const section = document.createElement("section");
-    this.appendChild(section);
-
     window.addEventListener("appcartchange", () => {
       this.render();
     });
@@ -23,7 +33,7 @@ export default class CartPage extends HTMLElement {
   }
 
   render() {
-    let section = this.querySelector("section");
+    let section = this.root.querySelector("section");
     if (app.store.cart.length === 0) {
       section.innerHTML = `<p class='empty'>Your order is empty</p>`;
     } else {
@@ -32,14 +42,14 @@ export default class CartPage extends HTMLElement {
       const template = document.getElementById("order-form-template");
       const content = template.content.cloneNode(true);
       section.appendChild(content);
-      this.setFormBindings(this.querySelector("ul").appendChild(item));
+      this.setFormBindings(this.root.querySelector("ul").appendChild(item));
 
       let total = 0;
 
       for (let prod of this.app.store.cart) {
         const item = document.createElement("cart-card");
         item.dataset.item = JSON.stringify(prod);
-        this.querySelector("ul").appendChild(item);
+        this.root.querySelector("ul").appendChild(item);
         total += prod.quantity * prod.product.price;
       }
 
