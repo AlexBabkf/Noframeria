@@ -53,7 +53,7 @@ export default class CartPage extends HTMLElement {
         total += prod.quantity * prod.product.price;
       }
 
-      this.querySelector("ul").innerHTML += `<li>
+      this.root.querySelector("ul").innerHTML += `<li>
       <p class='total'>Total</p>
       <p class='price-total'>$${total.toFixed(2)}</p>
   </li>`;
