@@ -1,6 +1,6 @@
 :root {
   --background-surface: #efefef;
-  --primaryColor: #43281c;
+  --primaryColor: #e12301;
   --secondaryColor: #333d29;
   --color3: #7f4f24;
   --color4: #b08968;
@@ -23,7 +23,7 @@ header {
 }
 
 header > h1 {
-  background-color: #e12301;
+  background-color: var(--primaryColor);
   color: white;
   margin-top: 0;
   text-align: center;
@@ -32,8 +32,14 @@ header > h1 {
   font-weight: normal;
 }
 
+main {
+  margin: auto;
+  margin-top: 60px;
+  max-width: 80%;
+}
+
 nav > a {
-  color: #fbf2c6;
+  color: var(--highlight);
   padding: 8px;
   display: block;
   position: absolute;

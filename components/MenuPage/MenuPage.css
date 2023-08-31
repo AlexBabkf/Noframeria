@@ -6,10 +6,8 @@ ul {
 
 #menu {
   display: flex;
-  flex-direction: column;
-  padding: 35px;
-  margin-right: 30px;
-  width: calc(100% - 50px);
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .category {
@@ -19,54 +17,83 @@ ul {
 }
 
 product-item {
-  width: 25%;
-  margin: 20px;
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+  transition: transform 0.2s;
+  margin: 10px;
 }
 
-button {
-  background-color: var(--color5);
-  border: 0;
-  margin: 10px 3%;
-  padding: 5px 0;
-  border-radius: 40px;
-  color: var(--color3);
-  font-size: 16px;
+.product-item section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   flex-grow: 1;
 }
 
-article section div {
-  flex-grow: 2;
-}
-
-article {
-  background-color: white;
-  margin-bottom: 16px;
-  padding-bottom: 1px;
-  border-radius: 5px;
-}
-
-article img {
-  width: 100%;
-}
-
-article a {
-  text-decoration: none;
-  display: block;
-}
-
-article section {
-  display: flex;
-}
-
-h4 {
-  margin: 8px 0 0 12px;
-  color: #333d29;
-  font-size: 18px;
-  font-weight: bold;
+.product-name {
+  margin: 5px;
 }
 
 .price {
-  margin: 0px 0 0px 12px;
   color: #b08968;
   font-size: 18px;
+  align-self: flex-end;
+  margin: 5px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 40px;
+}
+
+ul {
+  background-color: var(--color6);
+  margin: 4px 6px;
+  padding: 0px 12px;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+product-item img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.product-item:hover {
+  transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+  product-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
