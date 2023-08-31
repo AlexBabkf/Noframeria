@@ -42,11 +42,11 @@ export default class CartPage extends HTMLElement {
       const template = document.getElementById("order-form-template");
       const content = template.content.cloneNode(true);
       section.appendChild(content);
-      this.setFormBindings(this.root.querySelector("ul").appendChild(item));
+      this.setFormBindings(this.root.querySelector("form"));
 
       let total = 0;
 
-      for (let prod of this.app.store.cart) {
+      for (let prod of app.store.cart) {
         const item = document.createElement("cart-card");
         item.dataset.item = JSON.stringify(prod);
         this.root.querySelector("ul").appendChild(item);
