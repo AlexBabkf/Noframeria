@@ -93,6 +93,13 @@ product-item img {
 
 @media (max-width: 768px) {
   product-item {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 564px) {
+  product-item {
     flex: 1 1 100%;
     max-width: 100%;
   }
