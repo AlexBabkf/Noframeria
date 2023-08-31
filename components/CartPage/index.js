@@ -42,7 +42,7 @@ export default class CartPage extends HTMLElement {
       const template = document.getElementById("order-form-template");
       const content = template.content.cloneNode(true);
       section.appendChild(content);
-      this.setFormBindings("form");
+      this.setFormBindings(this.root.querySelector("form"));
 
       let total = 0;
 
